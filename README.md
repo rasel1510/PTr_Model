@@ -13,37 +13,13 @@
 
 
 
-## 📖 Overview & Abstract
+## 📖 Abstract
 
-Diabetic Foot Ulcers (DFUs) are severe, life-threatening complications of diabetes mellitus that lead to lower-extremity amputations if not identified and treated early. Traditional diagnostic methods depend heavily on manual visual inspections, which are subjective, time-intensive, and prone to inter-observer variability. While Convolutional Neural Networks (CNNs) have advanced automated medical diagnostics, they are constrained by localized fixed receptive fields, hindering their ability to capture multi-scale morphological variations and universal ulcer contextual dependencies.
+Quick recognition of Diabetic Foot Ulcers (DFUs) significantly improves survival outcomes patients. Whatever, accurate clinical diagnosis remains challenging.
+While numerous deep learning (DL) driven approaches have developed, many lack extensive accuracy also accessible boundary annotations. This study introduces an enhanced transformer model using transfer learning (TL) with a novel Pyramid Transformer (PTr) architecture to address these limitations. Unlike
+traditional CNNs which are constrained by fixed receptive fields, our proposed PTr leverages spatial-reduction attention (SRA) to adaptively capture native as
+well as universal contextual reliance’s. It is especially crucial to recognize DFU, where ulcer sizes, textures, and shapes vary significantly, demanding flexible and scale-aware feature extraction. Extensive evaluations were conducted across two datasets, achieving remarkable performance including accuracy,precision of 99.98% and 99.99% respectively. Further validation on an additional dataset of 3,026 annotated DFU images confirmed the robustness of the model, with results showing 97.00% recall, 97.50% precision, 98.00% F1-score, and 99.20% AUC—outperforming all compared models. Additionally, the Segment Anything Model (SAM) delivered excellent segmentation contributions. In order to enhance explainability, Grad-CAM was employed into Xception model, providing visual insights into key decision regions. Overall, the proposed PTr-based methodology demonstrates significant improvements in feature extraction, detection accuracy, and clinical applicability. This framework holds strong potential to support healthcare professionals in achieving early and reliable DFU diagnosis, ultimately improving patient care.
 
-```
-+---------------------------------------------------------------------------------------------------------+
-|                                           RESEARCH ABSTRACT                                             |
-+---------------------------------------------------------------------------------------------------------+
-| Quick recognition of Diabetic Foot Ulcers (DFUs) significantly improves survival outcomes for patients. |
-| However, accurate clinical diagnosis remains challenging. While numerous deep learning (DL) driven     |
-| approaches have been developed, many lack extensive accuracy and accessible boundary annotations. This  |
-| study introduces an enhanced transformer model using transfer learning (TL) with a novel Pyramid        |
-| Transformer (PTr) architecture to address these limitations.                                            |
-|                                                                                                         |
-| Unlike traditional CNNs constrained by fixed receptive fields, our proposed PTr leverages Spatial       |
-| Reduction Attention (SRA) to adaptively capture native as well as universal contextual dependencies.    |
-| This is crucial for DFU identification, where ulcer sizes, textures, and shapes vary significantly,     |
-| demanding flexible and scale-aware feature extraction.                                                  |
-|                                                                                                         |
-| Extensive evaluations were conducted across two benchmark datasets, achieving remarkable performance    |
-| including an accuracy of 99.98% and precision of 99.99%. Further validation on an additional dataset of |
-| 3,026 annotated DFU images confirmed the robustness of the model: 97.00% Recall, 97.50% Precision,      |
-| 98.00% F1-Score, and 99.20% AUROC—consistently outperforming compared state-of-the-art architectures. |
-|                                                                                                         |
-| Additionally, the Segment Anything Model (SAM) provides boundary segmentation, while Grad-CAM           |
-| visual interpretability on CNN/Xception models reveals salient clinical decision regions. Overall, the  |
-| proposed PTr framework demonstrates significant improvements in feature extraction, detection accuracy, |
-| and clinical applicability, holding strong potential to support healthcare professionals in early,     |
-| reliable DFU diagnosis.                                                                                 |
-+---------------------------------------------------------------------------------------------------------+
-```
 
 ---
 
