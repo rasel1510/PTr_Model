@@ -50,12 +50,6 @@ well as universal contextual reliance’s. It is especially crucial to recognize
 
 ## 🔬 Explainable AI & Segmentation (SAM + Grad-CAM)
 
-To meet the rigorous transparency standards of high-impact medical journals (Elsevier Q1):
-1. **Segment Anything Model (SAM)** provides pixel-level ulcer mask generation, delineating necrotic tissue, granulation, and wound borders.
-2. **Gradient-weighted Class Activation Mapping (Grad-CAM)** computes gradients entering the final convolutional/attention layers to visualize model focus:
-   $$\text{Heatmap}_{Grad-CAM} = \text{ReLU}\left( \sum_{k} \alpha_k^c A^k \right), \quad \alpha_k^c = \frac{1}{Z}\sum_{i}\sum_{j}\frac{\partial Y^c}{\partial A_{i,j}^k}$$
-
-This guarantees that decisions are based on pathological ulcer characteristics (erythema, maceration, calluses) rather than background skin artifacts.
 
 ### Qualitative SAM Segmentation Performance
 ![SAM Qualitative Segmentation Output](Methodology%20Structures/SamSegmentation%20Result.png)
