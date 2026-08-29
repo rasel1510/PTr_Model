@@ -23,14 +23,12 @@ well as universal contextual reliance’s. It is especially crucial to recognize
 
 ---
 
-## 🌟 Key Clinical & Architectural Highlights
+## 🌟 Key Highlights & Major Contributions
 
-- **Hierarchical 4-Stage Pyramid Transformer (PTr)**: Progressively captures multi-scale feature maps from fine high-resolution epidermal textures to coarse semantic ulcer contexts.
-- **Spatial Reduction Attention (SRA)**: Efficiently reduces the computational complexity of standard self-attention by scaling Key ($K$) and Value ($V$) spatial dimensions, maintaining high sensitivity to minute ulcer lesions while retaining global context.
-- **Transfer Learning (TL) Synergy**: Integrates pre-trained representations fine-tuned specifically for dermoscopic and clinical foot ulcer images.
-- **Dual-Perspective Evaluation**: Validated on multiple public and private cohorts including a rigorously annotated 3,026 DFU image cohort.
-- **Zero-Shot / Promptable Boundary Segmentation**: Leverages the Segment Anything Model (SAM) for automated lesion boundary delineation.
-- **Clinical Interpretability (XAI)**: Integrated Grad-CAM heatmaps highlight infected margins and ulcer craters, assisting clinicians in cross-verifying model decisions.
+1. **Enhanced PTr Architecture with Transfer Learning**: We propose an improved transformer-based model (Pyramid Transformer - PTr) integrated with transfer learning, achieving superior feature extraction, robust generalization, and state-of-the-art accuracy for DFU classification.
+2. **Scale-Aware Spatial-Reduction Attention (SRA)**: Our PTr with Spatial-Reduction Attention (SRA) adaptively captures native local and universal global contextual dependencies, enabling highly robust DFU detection across diverse ulcer sizes, irregular textures, and morphological shapes.
+3. **Precise Lesion Boundary Segmentation via SAM**: We employ the Segment Anything Model (SAM) for segmentation, providing precise pixel-level localization and boundary delineation of DFU-affected regions to support accurate clinical diagnosis and treatment planning.
+4. **Transparent Explainable AI (XAI) via Grad-CAM**: To enhance clinical trust and interpretability, we integrate Grad-CAM visualizations that highlight key ulcer and normal decision regions, offering complete transparency in the model's diagnostic decision-making process.
 
 ---
 
