@@ -12,23 +12,6 @@
 **"Enhanced Pyramid Transformer–CNN Architecture for Accurate Diabetic Foot Ulcer Detection"**  
 
 
----
-
-## 📌 Table of Contents
-1. [Overview & Abstract](#-overview--abstract)
-2. [Key Clinical & Architectural Highlights](#-key-clinical--architectural-highlights)
-3. [Methodology & Architecture Overview](#-methodology--architecture-overview)
-4. [Explainable AI & Segmentation (SAM + Grad-CAM)](#-explainable-ai--segmentation-sam--grad-cam)
-5. [Repository Structure](#-repository-structure)
-6. [Experimental Results & Benchmarks](#-experimental-results--benchmarks)
-7. [Installation & Setup](#-installation--setup)
-8. [Data Preparation](#-data-preparation)
-9. [Usage & Execution Guide](#-usage--execution-guide)
-10. [Reproducibility & Hardware Specifications](#-reproducibility--hardware-specifications)
-11. [Citation](#-citation)
-12. [License & Acknowledgements](#-license--acknowledgements)
-
----
 
 ## 📖 Overview & Abstract
 
