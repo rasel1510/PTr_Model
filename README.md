@@ -34,37 +34,17 @@ well as universal contextual reliance’s. It is especially crucial to recognize
 
 ## 🏗️ Methodology & Architecture Overview
 
-The end-to-end framework consists of **Data Preprocessing & Augmentation**, **Multi-Stage Feature Extraction via PTr**, **Transfer Learning Optimization**, and **Explainable AI Validation**.
+### 1. Overall Methodology & Clinical Pipeline
+![DFU Methodology Pipeline](Methodology%20Structures/DFU_methodology.png)
 
-```
-Input DFU Image (224x224x3)
-      │
-      ▼
-[Stage 1]: Overlap Patch Embed (7x7, s=4) ──► Block 1 (SRA, sr=8) ──► LayerNorm ──► H/4 x W/4 (C=64)
-      │
-      ▼
-[Stage 2]: Overlap Patch Embed (3x3, s=2) ──► Block 2 (SRA, sr=4) ──► LayerNorm ──► H/8 x W/8 (C=128)
-      │
-      ▼
-[Stage 3]: Overlap Patch Embed (3x3, s=2) ──► Block 3 (SRA, sr=2) ──► LayerNorm ──► H/16 x W/16 (C=320)
-      │
-      ▼
-[Stage 4]: Overlap Patch Embed (3x3, s=2) ──► Block 4 (SRA, sr=1) ──► LayerNorm ──► H/32 x W/32 (C=512)
-      │
-      ▼
-Global Spatial Representation (Adaptive Average Pooling / Mean Token)
-      │
-      ▼
-Classification Head (Linear Classifier / Softmax) ──► Prediction: [Ulcer vs. Healthy Skin]
-```
+### 2. Proposed Pyramid Transformer (PTr) Architecture with Transfer Learning
+![Proposed Pyramid Transformer with Transfer Learning](Methodology%20Structures/DFU_PyramidTran_TL.png)
 
-### Architectural Diagrams & Methodology Schematics
-The repository includes schematic diagrams located in the [`Methodology Structures/`](file:///c:/Users/DELL/Desktop/Wily_paper/Methodology%20Structures) directory:
-- **`DFU_methodology.png`**: Comprehensive end-to-end clinical workflow and processing pipeline.
-- **`DFU_PyramidTran_TL.png`**: Detailed architecture of the proposed Pyramid Transformer with Transfer Learning.
-- **`DFU_DenseNet201.png`**: Baseline CNN DenseNet-201 feature extraction topology.
-- **`DFU_SamArchitect.png`**: Segment Anything Model (SAM) zero-shot segmentation architecture.
-- **`SamSegmentation Result.png`**: Qualitative segmentation results on diverse DFU lesion morphologies.
+### 3. Baseline CNN Architecture (DenseNet-201)
+![DenseNet201 Architecture](Methodology%20Structures/DFU_DenseNet201.png)
+
+### 4. Segment Anything Model (SAM) Architecture
+![Segment Anything Model Architecture](Methodology%20Structures/DFU_SamArchitect.png)
 
 ---
 
@@ -76,6 +56,9 @@ To meet the rigorous transparency standards of high-impact medical journals (Els
    $$\text{Heatmap}_{Grad-CAM} = \text{ReLU}\left( \sum_{k} \alpha_k^c A^k \right), \quad \alpha_k^c = \frac{1}{Z}\sum_{i}\sum_{j}\frac{\partial Y^c}{\partial A_{i,j}^k}$$
 
 This guarantees that decisions are based on pathological ulcer characteristics (erythema, maceration, calluses) rather than background skin artifacts.
+
+### Qualitative SAM Segmentation Performance
+![SAM Qualitative Segmentation Output](Methodology%20Structures/SamSegmentation%20Result.png)
 
 ---
 
