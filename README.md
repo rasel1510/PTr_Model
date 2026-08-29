@@ -71,35 +71,6 @@ well as universal contextual reliance’s. It is especially crucial to recognize
 └── README.md                          # Comprehensive documentation & reviewer guide
 ```
 
----
-
-## 📊 Experimental Results & Benchmarks
-
-### 1. Benchmark Datasets Performance
-Evaluated across standard DFU benchmark datasets against leading Deep Learning architectures:
-
-| Model Architecture | Backing Paradigm | Accuracy (%) | Precision (%) | Recall / Sens. (%) | F1-Score (%) | AUROC (%) |
-|:-------------------|:----------------:|:------------:|:-------------:|:------------------:|:------------:|:---------:|
-| ResNet-50          | Standard CNN     | 95.40        | 95.20         | 95.00              | 95.10        | 97.30     |
-| DenseNet-201       | Dense CNN        | 97.80        | 97.60         | 97.70              | 97.65        | 98.40     |
-| Inception-V3       | Multi-scale CNN  | 96.10        | 96.00         | 95.80              | 95.90        | 97.80     |
-| Xception           | Depthwise CNN    | 98.10        | 98.00         | 98.10              | 98.05        | 98.70     |
-| ViT-Base / 16      | Vision Transformer | 97.20      | 97.10         | 97.00              | 97.05        | 98.10     |
-| Swin-Transformer   | Shifted Window   | 98.50        | 98.40         | 98.30              | 98.35        | 98.90     |
-| **Proposed PTr (Ours)** | **Pyramid Transformer + SRA** | **99.98** | **99.99** | **99.98** | **99.98** | **99.99** |
-
-### 2. Validation on 3,026 Annotated Clinical DFU Cohort
-To verify clinical generalizability under realistic conditions (varying lighting, skin tones, ulcer staging):
-
-| Metric | Proposed PTr Model Value | Clinical Significance |
-|:-------|:------------------------:|:----------------------|
-| **Accuracy** | **98.20%** | Reliable overall diagnostic categorization |
-| **Precision** | **97.50%** | Minimizes false positive alerts for non-ulcer skin |
-| **Recall / Sensitivity** | **97.00%** | Critical metric ensuring minimal missed early-stage ulcers |
-| **F1-Score** | **98.00%** | Balanced harmonic mean across both positive and negative cases |
-| **AUROC** | **99.20%** | Exceptional discriminative power across all decision thresholds |
-
----
 
 ## ⚙️ Installation & Setup
 
@@ -189,20 +160,6 @@ Execute training:
 python main_method.py
 ```
 
-### 3. Hyperparameters & Optimization Details
-
-| Hyperparameter | Value | Description |
-|:---------------|:------|:------------|
-| **Input Resolution** | $224 \times 224 \times 3$ | Standardized RGB input |
-| **Embedding Dimensions** | `[64, 128, 320, 512]` | 4-Stage hierarchical progression |
-| **Attention Heads** | `[1, 2, 5, 8]` | Scale-adaptive multi-head attention |
-| **Stage Depths** | `[2, 2, 2, 2]` | Number of Transformer blocks per stage |
-| **SRA Reduction Ratios** | `[8, 4, 2, 1]` | Spatial reduction ratios ($R_1 \dots R_4$) |
-| **Optimizer** | Adam ($\beta_1=0.9, \beta_2=0.999$) | Adaptive moment estimation |
-| **Learning Rate** | $1 \times 10^{-4}$ | Initial learning rate with Cosine Annealing |
-| **Weight Decay** | $1 \times 10^{-4}$ | $L_2$ Regularization |
-| **Batch Size** | 32 | Mini-batch sample size |
-| **Drop Path Rate** | 0.1 | Stochastic depth regularization |
 
 ---
 
@@ -218,24 +175,8 @@ All experiments reported in the paper were conducted under the following standar
 
 ---
 
-## 📜 Citation
 
-If you find this repository, architecture, or benchmark results helpful in your research, please cite our Elsevier journal article:
 
-```bibtex
-@article{dfu_pyramid_transformer_2026,
-  title={Enhanced Pyramid Transformer--CNN Architecture for Accurate Diabetic Foot Ulcer Detection},
-  author={Research Team},
-  journal={Elsevier Journal of Biomedical Informatics / Artificial Intelligence in Medicine},
-  year={2026},
-  volume={},
-  pages={},
-  doi={},
-  note={Under Peer Review}
-}
-```
-
----
 
 ## 📄 License & Acknowledgements
 
