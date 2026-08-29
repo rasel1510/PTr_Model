@@ -161,20 +161,6 @@ python main_method.py
 ```
 
 
----
-
-## 💻 Reproducibility & Hardware Specifications
-
-All experiments reported in the paper were conducted under the following standardized experimental setup:
-
-- **Operating System**: Ubuntu 22.04 LTS / Windows 11 Pro 64-bit
-- **CPU**: Intel Xeon / Core i9 (16 Cores, 3.20 GHz)
-- **GPU**: NVIDIA RTX 3090 (24 GB VRAM) / NVIDIA A100 (40 GB VRAM)
-- **Framework**: PyTorch 2.x with CUDA 11.8 / 12.1 and cuDNN backend
-- **Random Seed**: Fixed to `42` across NumPy, PyTorch, and CUDA generators for deterministic execution.
-
----
-
 
 
 
