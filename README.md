@@ -7,9 +7,10 @@
 [![Reproducibility](https://img.shields.io/badge/Reproducibility-Verified-success.svg)](#experimental-results)
 [![Explainable AI](https://img.shields.io/badge/XAI-Grad--CAM%20%7C%20SAM-orange.svg)](#explainable-ai--segmentation)
 
-Official PyTorch implementation and evaluation suite for the research paper:  
+
+ 
 **"Enhanced Pyramid Transformer–CNN Architecture for Accurate Diabetic Foot Ulcer Detection"**  
-*(Under peer review in an Elsevier Q1 Biomedical/AI Journal)*.
+
 
 ---
 
